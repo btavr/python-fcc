@@ -1,16 +1,11 @@
-my_list = [1, 2]
+def add_expense(expenses, amount, category):
+    expenses.append({'amount': amount, 'category': category})
+    
+def print_expenses(expenses):
+    for expense in expenses:
+        print(f'Amount: {expense["amount"]}, Category: {expense["category"]}')
+    
+def total_expenses(expenses):
+    return sum(map(lambda expense: expense['amount'], expenses))
 
-my_list.append(3)
-print(my_list)
-
-print(my_list[0])
-
-my_list[0] = 0
-print(my_list)
-
-my_list.insert(1, 1)
-print(my_list)
-
-my_list.pop(3)
-print(my_list)
-
+expenses = []
